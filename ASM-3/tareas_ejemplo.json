@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1714838400000,
+    "text": "Practicar meditación por 10 minutos",
+    "dueDate": "2026-05-07",
+    "completed": true,
+    "createdAt": "2026-05-06T08:00:00.000Z",
+    "updatedAt": "2026-05-06T09:15:00.000Z"
+  },
+  {
+    "id": 1714842000000,
+    "text": "Revisar correos electrónicos importantes",
+    "dueDate": "2026-05-07",
+    "completed": false,
+    "createdAt": "2026-05-06T09:00:00.000Z",
+    "updatedAt": "2026-05-06T09:00:00.000Z"
+  },
+  {
+    "id": 1714845600000,
+    "text": "Hacer ejercicio por 30 minutos",
+    "dueDate": "2026-05-08",
+    "completed": false,
+    "createdAt": "2026-05-06T10:00:00.000Z",
+    "updatedAt": "2026-05-06T10:00:00.000Z"
+  },
+  {
+    "id": 1714849200000,
+    "text": "Preparar presentación para reunión",
+    "dueDate": "2026-05-10",
+    "completed": false,
+    "createdAt": "2026-05-06T11:00:00.000Z",
+    "updatedAt": "2026-05-06T11:00:00.000Z"
+  },
+  {
+    "id": 1714852800000,
+    "text": "Tomar descansos cada hora",
+    "dueDate": null,
+    "completed": true,
+    "createdAt": "2026-05-06T12:00:00.000Z",
+    "updatedAt": "2026-05-06T14:30:00.000Z"
+  },
+  {
+    "id": 1714856400000,
+    "text": "Llamar a un amigo o familiar",
+    "dueDate": "2026-05-09",
+    "completed": false,
+    "createdAt": "2026-05-06T13:00:00.000Z",
+    "updatedAt": "2026-05-06T13:00:00.000Z"
+  },
+  {
+    "id": 1714860000000,
+    "text": "Leer un capítulo del libro de crecimiento personal",
+    "dueDate": null,
+    "completed": false,
+    "createdAt": "2026-05-06T14:00:00.000Z",
+    "updatedAt": "2026-05-06T14:00:00.000Z"
+  },
+  {
+    "id": 1714863600000,
+    "text": "Planificar las tareas de mañana",
+    "dueDate": "2026-05-07",
+    "completed": false,
+    "createdAt": "2026-05-06T15:00:00.000Z",
+    "updatedAt": "2026-05-06T15:00:00.000Z"
+  },
+  {
+    "id": 1714867200000,
+    "text": "Revisar informe trimestral (VENCIDA)",
+    "dueDate": "2026-05-05",
+    "completed": false,
+    "createdAt": "2026-05-05T08:00:00.000Z",
+    "updatedAt": "2026-05-05T08:00:00.000Z"
+  }
+]

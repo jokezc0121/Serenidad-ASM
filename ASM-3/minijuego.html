@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego - Serenidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Serenidad</div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#tareas">Mis Tareas</a>
+            <a href="index.html#relajacion">Relajación</a>
+            <a href="minijuego.html">Minijuego</a>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                🌙
+            </button>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class="minijuego-container">
+            <div class="section-header">
+                <h2>Espacio Interactivo</h2>
+                <p>Un momento de juego para despejar tu mente</p>
+            </div>
+
+            
+    <div class="game-placeholder">
+    <iframe 
+        src="minijuego/index.html" 
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+        </section>
+    </main>
+
+    <footer>
+          <p><strong>Serenidad</strong> - ASM-JASCV</p>
+      
+        <p style="font-size: 0.85rem; margin-top: 1rem;">© 2026 - Respira, organiza, vive mejor</p>
+    </footer>
+
+   <script>
+class ThemeManager {
+    constructor() {
+        this.theme = localStorage.getItem('serenidad_theme') || 'light';
+        this.init();
+    }
+
+    init() {
+        this.applyTheme();
+
+        const themeToggle = document.getElementById('themeToggle');
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
+    }
+
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+
+        this.applyTheme();
+
+        localStorage.setItem('serenidad_theme', this.theme);
+    }
+
+    applyTheme() {
+        document.documentElement.setAttribute('data-theme', this.theme);
+
+        const toggle = document.getElementById('themeToggle');
+
+        if (toggle) {
+            toggle.textContent = this.theme === 'light' ? '🌙' : '☀️';
+        }
+    }
+}
+
+class MobileMenuManager {
+    constructor() {
+        this.menuToggle = document.getElementById('menuToggle');
+        this.navLinks = document.getElementById('navLinks');
+        this.links = document.querySelectorAll('.nav-links a');
+
+        this.init();
+    }
+
+    init() {
+        if (!this.menuToggle || !this.navLinks) return;
+
+        this.menuToggle.addEventListener('click', () => this.toggleMenu());
+
+        this.links.forEach(link => {
+            link.addEventListener('click', () => this.closeMenu());
+        });
+    }
+
+    toggleMenu() {
+        this.menuToggle.classList.toggle('open');
+        this.navLinks.classList.toggle('open');
+    }
+
+    closeMenu() {
+        this.menuToggle.classList.remove('open');
+        this.navLinks.classList.remove('open');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new ThemeManager();
+    new MobileMenuManager();
+});
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

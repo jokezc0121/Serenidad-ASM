@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenidad - Tu espacio de calma</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Serenidad</div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#inicio">Inicio</a>
+            <a href="#tareas">Mis Tareas</a>
+            <a href="#relajacion">Relajación</a>
+            <a href="minijuego.html">Minijuego</a>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                🌙
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="inicio">
+        <h1>Encuentra tu paz interior</h1>
+
+        <p>
+            Serenidad es tu compañero digital para manejar el estrés,
+            organizar tu día y encontrar momentos de calma en medio del caos.
+            Respira, organiza y relájate.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="#tareas" class="btn btn-primary">Comenzar</a>
+            <a href="#relajacion" class="btn btn-secondary">Explorar Relajación</a>
+        </div>
+    </section>
+
+    <section id="tareas">
+
+        <div class="section-header">
+            <h2>Gestión de Actividades</h2>
+
+            <p>
+                Organiza tus tareas y libera tu mente del desorden.
+                Un paso a la vez.
+            </p>
+        </div>
+
+        <div class="task-manager">
+
+            <div class="task-controls">
+
+                <div class="task-input-group">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        class="task-input"
+                        placeholder="¿Qué necesitas hacer hoy?"
+                        aria-label="Nueva tarea"
+                    >
+                </div>
+
+                <div class="task-date-group">
+                    <label for="taskDate" class="date-label">
+                        Fecha límite:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                        class="task-date-input"
+                        aria-label="Fecha límite de la tarea"
+                    >
+                </div>
+
+                <button class="btn btn-primary" id="addTaskBtn">
+                    Agregar Tarea
+                </button>
+
+            </div>
+         <h3 class="filters-title">Filtros</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    Todas
+                </button>
+
+                <button class="filter-btn" data-filter="pending">
+                    Pendientes
+                </button>
+
+                <button class="filter-btn" data-filter="completed">
+                    Completadas
+                </button>
+
+                <button class="filter-btn" data-filter="today">
+                    Hoy
+                </button>
+
+                <button class="filter-btn" data-filter="overdue">
+                    Vencidas
+                </button>
+            </div>
+
+            <div class="file-controls">
+
+                <button class="btn btn-secondary" id="exportBtn">
+                    📥 Exportar Tareas (JSON)
+                </button>
+
+                <div class="file-input-wrapper">
+
+                    <input
+                        type="file"
+                        id="importFile"
+                        accept=".json"
+                        aria-label="Importar archivo JSON"
+                    >
+
+                    <label for="importFile" class="file-label">
+                        📤 Importar Tareas (JSON)
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="task-list" id="taskList"></div>
+
+            <div class="task-stats">
+
+                <div class="stat-item">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" id="pendingTasks">0</div>
+                    <div class="stat-label">Pendientes</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Completadas</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number" id="progressPercent">0%</div>
+                    <div class="stat-label">Progreso</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p><strong>Serenidad</strong> - ASM-JASCV</p>
+
+    <p style="font-size: 0.85rem; margin-top: 1rem;">
+        © 2026 - Respira, organiza, vive mejor
+    </p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
